@@ -7,6 +7,8 @@ import strawberry
 class MeUser:
     id: strawberry.ID
     email: str
+    first_name: str
+    last_name: str
 
     @strawberry.field
     def tickets(self, info, conference: str) -> List["Ticket"]:
@@ -19,3 +21,5 @@ class User:
     email: str
     name: str
     username: str
+    first_name: str
+    last_name: str
