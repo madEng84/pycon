@@ -17,6 +17,7 @@ class MeUser:
     recipient_code: str
     pec_address: str
     address: str
+    phone_number: str
 
     @strawberry.field
     def tickets(self, info, conference: str) -> List["Ticket"]:
@@ -38,3 +39,4 @@ class User:
     recipient_code: str
     pec_address: str
     address: str
+    phone_number: str
