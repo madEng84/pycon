@@ -9,6 +9,14 @@ class MeUser:
     email: str
     first_name: str
     last_name: str
+    gender: str
+    date_birth: str
+    business_name: str
+    fiscal_code: str
+    vat_number: str
+    recipient_code: str
+    pec_address: str
+    address: str
 
     @strawberry.field
     def tickets(self, info, conference: str) -> List["Ticket"]:
@@ -22,4 +30,11 @@ class User:
     name: str
     username: str
     first_name: str
-    last_name: str
+    gender: str
+    date_birth: str
+    business_name: str
+    fiscal_code: str
+    vat_number: str
+    recipient_code: str
+    pec_address: str
+    address: str
