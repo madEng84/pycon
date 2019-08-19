@@ -1,6 +1,7 @@
 from typing import List
 
 import strawberry
+
 from countries.types import Country
 
 
@@ -11,6 +12,7 @@ class MeUser:
     first_name: str
     last_name: str
     gender: str
+    open_to_recruiting: bool
     date_birth: str
     business_name: str
     fiscal_code: str
@@ -34,6 +36,7 @@ class User:
     username: str
     first_name: str
     gender: str
+    open_to_recruiting: bool
     date_birth: str
     business_name: str
     fiscal_code: str
