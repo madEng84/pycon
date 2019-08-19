@@ -2,8 +2,6 @@ from typing import List
 
 import strawberry
 
-from countries.types import Country
-
 
 @strawberry.type
 class MeUser:
@@ -20,7 +18,7 @@ class MeUser:
     recipient_code: str
     pec_address: str
     address: str
-    country: Country
+    country: str
     phone_number: str
 
     @strawberry.field
@@ -44,5 +42,5 @@ class User:
     recipient_code: str
     pec_address: str
     address: str
-    country: Country
+    country: str
     phone_number: str
