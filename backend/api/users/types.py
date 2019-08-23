@@ -4,6 +4,11 @@ import strawberry
 
 
 @strawberry.type
+class Image:
+    url: str
+
+
+@strawberry.type
 class MeUser:
     id: strawberry.ID
     email: str
@@ -26,6 +31,10 @@ class MeUser:
     def tickets(self, info, conference: str) -> List["Ticket"]:
         return self.tickets.filter(ticket_fare__conference__code=conference).all()
 
+    @strawberry.field
+    def image(self, info) -> Image:
+        return self.image
+
 
 @strawberry.type
 class User:
@@ -46,3 +55,7 @@ class User:
     address: Optional[str]
     country: str
     phone_number: Optional[str]
+
+    @strawberry.field
+    def image(self, info) -> Image:
+        return self.image
