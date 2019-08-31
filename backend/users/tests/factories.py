@@ -4,12 +4,13 @@ import factory
 import factory.fuzzy
 from factory.django import DjangoModelFactory
 from pytest_factoryboy import register
-
 from users.models import COUNTRIES, User
 
 
 @register
 class UserFactory(DjangoModelFactory):
+
+    image = factory.Faker("file_path", extension="jpg")
     email = factory.Faker("email")
     username = factory.Faker("user_name")
 
