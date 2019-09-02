@@ -26,6 +26,7 @@ class MeUser:
     address: Optional[str]
     country: str
     phone_number: Optional[str]
+    image: Optional[Image]
 
     @strawberry.field
     def tickets(self, info, conference: str) -> List["Ticket"]:
