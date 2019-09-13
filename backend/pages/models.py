@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils.text import slugify
 from django.utils.translation import ugettext_lazy as _
+from i18nfield.fields import I18nCharField, I18nTextField
 from model_utils.models import TimeStampedModel
 
 
@@ -10,10 +11,10 @@ class PageManager(models.Manager):
 
 
 class Page(TimeStampedModel):
-    title = models.CharField(_("title"), max_length=200)
+    title = I18nCharField(_("title"), max_length=200)
     slug = models.SlugField(_("slug"), max_length=200, blank=True)
     content = models.TextField(_("content"), blank=False)
-    published = models.BooleanField(_("published"), default=False)
+    published = I18nTextField(_("published"), default=False)
     image = models.ImageField(_("image"), null=True, blank=True, upload_to="pages")
     conference = models.ForeignKey(
         "conferences.Conference",

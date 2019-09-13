@@ -186,6 +186,14 @@ version = "2.6.1"
 
 [[package]]
 category = "main"
+description = "Store internationalized strings in Django models"
+name = "django-i18nfield"
+optional = false
+python-versions = "*"
+version = "1.6.0"
+
+[[package]]
+category = "main"
 description = "Django model mixins and utilities"
 name = "django-model-utils"
 optional = false
@@ -884,7 +892,7 @@ version = "0.6.0"
 more-itertools = "*"
 
 [metadata]
-content-hash = "99a1ad5b04b249045733e4db2bc60be7ae3bd11757b53aeabbcf0e8a1fbbb4ac"
+content-hash = "b9570a3202d04e23f95bc736458f315c76b3758332550faadd6f7a61dff8c006"
 python-versions = "^3.7"
 
 [metadata.hashes]
@@ -906,6 +914,7 @@ defusedxml = ["6687150770438374ab581bb7a1b327a847dd9c5749e396102de3fad4e8a3ef93"
 django = ["148a4a2d1a85b23883b0a4e99ab7718f518a83675e4485e44dc0c1d36988c5fa", "deb70aa038e59b58593673b15e9a711d1e5ccd941b5973b30750d5d026abfd56"]
 django-environ = ["e9c171b9d5f540e6f3bc42866941d9cd0bd77fb110a7c13a7c4857a2c08cfa40", "ee2f8405d83137e3328b26b3de01bd715b5395fca22feb919dcc905fb6099cfa"]
 django-fsm = ["96f776736042b8cde03483cb4b27c3a62580da40fc9b942845349718afdf5d0f", "cacd5485c726b411c6728c9ae3120303c9badf8aa0edff2db3aecdbe3a906945"]
+django-i18nfield = ["46d3cc7e0d41bdac3c079fff1630d0d6e094daa7e00757d19e70a87bed80e437", "f8b2540021f64bb5f07f38c820b5b0c0c2ae2eec1d2e9f9f430664e3f6ba5dd9"]
 django-model-utils = ["3f130a262e45d73e0950d2be76af4bf4ee86804dd60e5f90afc5cd948fcfe760", "682f58c1de330cedcda58cc85d5232c5b47a9e2cb67bef4541fb43fdaeb18e96"]
 django-ordered-model = ["0931f498008f91a00a32c4e0ae08a662ef608a1092bf6e6ec9af9b1a83f08acf", "abf0d963f7e607a994baf6bc300e50af647b3d243c3e592c6cc8f8b924b6d427"]
 django-storages = ["87287b7ad2e789cd603373439994e1ac6f94d9dc2e5f8173d2a87aa3ed458bd9", "f3b3def96493d3ccde37b864cea376472baf6e8a596504b209278801c510b807"]

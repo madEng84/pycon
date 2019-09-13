@@ -1,4 +1,5 @@
 import environ
+from django.utils.translation import ugettext_lazy as _
 
 root = environ.Path(__file__) - 3  # three folder back (/a/b/c/ - 3 = /)
 
@@ -100,6 +101,8 @@ AUTH_PASSWORD_VALIDATORS = [{"NAME": validator} for validator in PASSWORD_VALIDA
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
 LANGUAGE_CODE = "en-us"
+
+LANGUAGES = [("en", _("English")), ("it", _("Italian"))]
 
 LOCALE_PATHS = [root("locale")]
 
