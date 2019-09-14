@@ -7,12 +7,12 @@ from .payments.mutations import PaymentsMutations
 from .submissions.mutations import SubmissionsMutations
 from .tickets.mutations import TicketsMutations
 from .users.mutations import UsersMutations
-from .users.schema import UsersQuery
+from .users.schema import CountryQuery, UsersQuery
 from .voting.mutations import VotesMutations
 
 
 @strawberry.type
-class Query(UsersQuery, ConferenceQuery, BlogQuery, PagesQuery):
+class Query(UsersQuery, ConferenceQuery, BlogQuery, PagesQuery, CountryQuery):
     pass
 
 

@@ -42,3 +42,9 @@ class User:
     open_to_newsletter: bool
     date_birth: str
     country: str
+
+
+@strawberry.type
+class Country:
+    code: str
+    name: str
