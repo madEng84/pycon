@@ -1,5 +1,10 @@
-const API_URL = process.env.API_URL || "http://127.0.0.1:8000/graphql";
-const CONFERENCE_CODE = process.env.CONFERENCE_CODE || "pycon-demo";
+require("dotenv").config({
+    path: `.env`,
+});
+
+const API_URL =
+    process.env.API_URL || "https://pycon-italia.netlify.com/graphql";
+const CONFERENCE_CODE = process.env.CONFERENCE_CODE || "pycon11";
 
 module.exports = {
     plugins: [
