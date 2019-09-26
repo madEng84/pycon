@@ -52,6 +52,7 @@ jobs:
       - name: Install codecov
         working-directory: backend
         run: pip install codecov
+
       - name: pytest
         working-directory: backend
         run: |

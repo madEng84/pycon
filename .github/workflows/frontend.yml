@@ -3,6 +3,7 @@ name: Frontend
 on:
   pull_request:
     paths:
+    - '.github/workflows/*'
     - 'backend/**/*'
     - 'backend/*'
     - 'frontend/**/*'
@@ -88,6 +89,7 @@ jobs:
         yarn codegen-fragments
         yarn build
         yarn codegen-queries
+
       env:
         SECRET_KEY: demo
         FORCE_PYCON_HOST: False
@@ -97,6 +99,8 @@ jobs:
         DEBUG: True
         SLACK_INCOMING_WEBHOOK_URL: ${{ secrets.TF_VAR_slack_incoming_webhook_url }}
         DATABASE_URL: postgresql://postgres:postgres@localhost:${{ job.services.postgres.ports['5432'] }}/postgres
+    - run: yarn codegen
+      working-directory: frontend
     - run: yarn tsc
       working-directory: frontend
     - uses: netlify/actions/cli@master
@@ -105,3 +109,4 @@ jobs:
       env:
         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+
