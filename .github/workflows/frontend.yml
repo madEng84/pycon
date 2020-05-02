@@ -90,6 +90,7 @@ jobs:
         yarn build
         yarn codegen-queries
 
+
       env:
         SECRET_KEY: demo
         FORCE_PYCON_HOST: False
@@ -109,4 +110,5 @@ jobs:
       env:
         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+
 

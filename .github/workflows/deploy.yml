@@ -110,6 +110,7 @@ jobs:
 
     - run: yarn build
       working-directory: frontend
+
       env:
         CONFERENCE_CODE: pycon11
         API_URL: https://d1111jewijk23m.cloudfront.net/graphql
